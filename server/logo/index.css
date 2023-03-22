@@ -1,0 +1,125 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    background: #adadad;
+}
+
+#Help4Genie-logo{
+    position: relative;
+    background-color: #fff;
+    background-image: url();
+}
+#Help4Genie-logo.animate>.tp{
+    animation-duration: 1s;
+}
+#Help4Genie-logo>.tp{
+    position: absolute;
+    width: 15px;
+    border-radius: 7px;
+    height: 100px;
+    background: #000;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+}
+#Help4Genie-logo>.clrt1{
+    background-color: #52bd24;
+    animation-timing-function: ease-in-out;
+}
+#Help4Genie-logo>.clrt2{
+    background-color: #3ec8aa;
+}
+#Help4Genie-logo>.p1{
+    left: 260px;
+    top: 65px;
+    transform: rotate(40deg);
+    height: 150px;
+    animation-name: secondShadow;
+
+}
+#Help4Genie-logo>.p2{
+    left: 189px;
+    top: 197px;
+    transform: rotate(40deg);
+    height: 55px;
+    animation-name: firstShadow;
+}
+#Help4Genie-logo>.p3{
+    left: 246px;
+    top: 173px;
+    transform: rotate(40deg);
+    height: 55px;
+    animation-name: secondShadow;
+
+}
+#Help4Genie-logo>.p4{
+    left: 285px;
+    top: 142px;
+    height: 86px;
+    animation-name: firstShadow;
+
+}
+#Help4Genie-logo>.p5{
+    left: 253px;
+    top: 185px;
+    height: 114px;
+    transform: rotate(90deg);
+    animation-name: secondShadow;
+
+
+}
+#Help4Genie-logo>.p6{
+    left: 285px;
+    top: 260px;
+    height: 44px;
+    animation-name: firstShadow;
+
+}
+#Help4Genie-logo>.p7{
+    left: 235px;
+    top: 233px;
+    height: 68px;
+    transform: rotate(90deg);
+    animation-name: secondShadow;
+}
+#Help4Genie-logo>.logo-text{
+    font-size: 40px;
+    font-weight: 600;
+    font-family: Arial Black;
+    color: #52bd24;
+    text-align: center;
+    top: 320px;
+    position: absolute;
+    width: 500px;
+    animation-name: firstShadow;
+    
+}
+#Help4Genie-logo>.logo-text>span{
+    animation-name: firstColor;
+    color:#3ec8aa;
+    
+}
+
+@keyframes firstShadow {
+    from {
+      box-shadow: #333 0 0 1px;
+    }
+    50%{
+
+        box-shadow: #222 0px 0px 3px;
+    }
+    to {
+        box-shadow: #333 0 0 1px;
+    }
+  }
+  @keyframes secondShadow {
+    from {
+        box-shadow: #222 0px 0px 3px;
+    }
+    50%{
+      box-shadow: #333 0 0 1px;
+    }
+    to {
+        box-shadow: #222 0px 0px 3px;
+    }
+  }
+  
