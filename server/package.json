@@ -4,7 +4,9 @@
   "description": "IT monitoring",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "cross-env NODE_ENV=development nodemon -e js,yaml,json server.js",
+    "test": "cross-env NODE_ENV=test node server.js",
+    "start": "cross-env NODE_ENV=development node server.js"
   },
   "keywords": [
     "IT",
@@ -25,9 +27,16 @@
     "pg": "^8.10.0",
     "pg-hstore": "^2.3.4",
     "sequelize": "^6.29.3",
+    "sharp": "^0.31.3",
     "socket.io": "^4.6.1",
     "swagger-jsdoc": "^6.2.8",
     "swagger-ui-express": "^4.6.2",
-    "ua-parser-js": "^1.0.34"
+    "ua-parser-js": "^1.0.34",
+    "xss-clean": "^0.1.1"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "nodemon": "^2.0.21",
+    "sequelize-cli": "^6.6.0"
   }
 }

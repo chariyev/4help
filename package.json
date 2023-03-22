@@ -1,0 +1,26 @@
+{
+  "name": "4help",
+  "version": "1.0.0",
+  "description": "IT monitoring and Help Desk",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chariyev/4help.git"
+  },
+  "keywords": [
+    "IT",
+    "Monitoring",
+    "HelpDesk",
+    "Remote",
+    "Control"
+  ],
+  "author": "Agamyrat Ch.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chariyev/4help/issues"
+  },
+  "homepage": "https://github.com/chariyev/4help#readme"
+}
