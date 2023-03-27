@@ -1,43 +1,44 @@
 const options = {
+    title: '4Help API',
     definition: {
-        openapi: '3.0.3',
+        openapi: '3.0.2',
         info: {
-            title: 'HR API',
+            title: '4Help API',
             version: '1.0.0',
-            description: 'HR management system API documentation.',
+            description: '4Help API documentation.',
             contact: {
-                name: 'Kyyas Ilmyradov',
-                email: 'kyyas.ilmyradov@gmail.com',
+                name: 'Agamyrat Chariyev',
+                email: 'agamyrat.chariyev@gmail.com',
+            },
+        },
+        servers: [
+            {
+                url: '{protocol}://{host}:{port}/api/',
+                variables: {
+                    protocol: {
+                        enum: ['http', 'https'],
+                        default: 'http',
+                    },
+                    host: {
+                        default: 'localhost',
+                    },
+                    port: {
+                        default: process.env?.PORT || '3000',
+                    },
+                },
+            },
+        ],
+        components: {
+            securitySchemes: {
+                admin: {
+                    type: 'http',
+                    scheme: 'bearer',
+                    bearerFormat: 'JWT',
+                    description: "All admin api's use this tokken",
+                },
             },
         },
     },
-    servers: [
-        {
-            url: `http://localhost:${process.env.PORT}`,
-            variables: {
-                host: {
-                    enum: ['localhost'],
-                    default: 'localhost',
-                },
-                port: {
-                    default: process.env.PORT,
-                },
-            },
-        },
-    ],
-    components: {
-        securitySchemes: {
-            basicAuth: {
-                type: 'http',
-                scheme: 'basic',
-            },
-        },
-    },
-    security: [
-        {
-            basicAuth: [],
-        },
-    ],
 
     apis: [`${__dirname}/*.yaml`, `${__dirname}/*/*.yaml`],
 };

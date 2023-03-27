@@ -1,9 +1,7 @@
-'use strict';
 const express = require('express');
 const router = express.Router({ caseSensitive: true });
+const authControllers = require('../controllers/authControllers');
 
-router.use('/auth', require('./authRoutes'));
-// router.use('/users');
-// router.use('/clients');
+router.post('/', authControllers.login);
 
 module.exports = router;

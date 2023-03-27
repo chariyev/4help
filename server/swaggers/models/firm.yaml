@@ -1,0 +1,30 @@
+components:
+    schemas:
+        firms:
+            type: object
+            required:
+                - uuid
+                - name
+                - nr
+                - apiKey
+            properties:
+                uuid:
+                    type: string
+                    format: uuid
+                name:
+                    type: string
+                nr:
+                    type: integer
+                    example: 1
+                apiKey:
+                    type: string
+                    format: uuid
+                active:
+                    type: boolean
+                    default: true
+                updatedAt:
+                    type: string
+                    format: datetime
+                createdAt:
+                    type: string
+                    format: datetime

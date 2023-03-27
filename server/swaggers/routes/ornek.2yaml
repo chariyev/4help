@@ -1,0 +1,73 @@
+paths:
+    /api/v1/coefficients:
+        get:
+            tags: [Coefficients]
+            description: Returns a list of all Coefficients
+            statuses: [200, 401, 404, 500]
+            parameters:
+                - in: query
+                  name: year
+                  schema:
+                      type: string
+                  required: true
+                  description: Year
+                - in: query
+                  name: month
+                  schema:
+                      type: string
+                  required: true
+                  description: Month
+                - in: query
+                  name: employeeUuid
+                  schema:
+                      type: string
+                      format: uuid
+                  required: true
+                  description: Demanding employee Uuid
+    /api/v1/coefficients/{uuid}:
+        get:
+            tags: [Coefficients]
+            description: Getting single coefficient by uuid
+            statuses: [400, 401, 404, 500]
+            parameters:
+                - in: path
+                  name: uuid
+                  schema:
+                      type: string
+                      format: uuid
+                  required: true
+                  description: Coefficient uuid
+            responses:
+                '200':
+                    description: An object which consists coefficient information
+                    content:
+                        application/json:
+                            schema:
+                                allOf:
+                                    - $ref: '#/components/schemas/Coefficients'
+                                    - type: object
+                                      properties:
+                                          salary:
+                                              $ref: '#/components/schemas/ReducedFieldsOfSalaries'
+                                          employee:
+                                              $ref: '#/components/schemas/ReducedFieldsOfEmployees'
+    /api/v1/coefficients/calculate/{uuid}:
+        post:
+            tags: [Coefficients]
+            description: Adding a new coefficient
+            statuses: [400, 401, 404, 500]
+            parameters:
+                - in: path
+                  name: uuid
+                  schema:
+                      type: string
+                      format: uuid
+                  required: true
+                  description: Coefficient uuid
+            responses:
+                '200':
+                    description: An object which consists updated coefficient information
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/Coefficients'

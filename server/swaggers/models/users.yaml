@@ -1,0 +1,56 @@
+components:
+    schemas:
+        users:
+            type: object
+            required:
+                - uuid
+                - firstName
+                - lastName
+                - username
+                - password
+                - refreshToken
+            properties:
+                uuid:
+                    type: string
+                    format: uuid
+                firstName:
+                    type: string
+                    example: Aman
+                lastName:
+                    type: string
+                    example: Berdiyev
+                title:
+                    type: string
+                    example: Software Engineer
+                username:
+                    type: string
+                    example: aman01
+                email:
+                    type: string
+                    example: aman01@gmail.com
+                password:
+                    type: string
+                refreshTokenMobile:
+                    type: string
+                    format: uuid
+                refreshTokenWeb:
+                    type: string
+                    format: uuid
+                lastActiveTime:
+                    type: string
+                    format: datetime
+                phoneNumber:
+                    type: string
+                    example: +99363384289
+                status:
+                    type: string
+                    enum: [offline, online, busy, dnd]
+                active:
+                    type: boolean
+                    example: true
+                updatedAt:
+                    type: string
+                    format: datetime
+                createdAt:
+                    type: string
+                    format: datetime

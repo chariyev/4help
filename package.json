@@ -4,7 +4,10 @@
   "description": "IT monitoring and Help Desk",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npm --prefix server run test",
+    "test-watch": "npm --prefix server run test-watch",
+    "dev": "npm --prefix server run dev",
+    "start": "npm --prefix server run start"
   },
   "repository": {
     "type": "git",
