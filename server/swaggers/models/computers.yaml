@@ -1,0 +1,100 @@
+components:
+    schemas:
+        computers:
+            type: object
+            required:
+                - uuid
+                - name
+                - nr
+                - apiKey
+            properties:
+                uuid:
+                    type: string
+                    format: uuid
+                accessKey:
+                    type: string
+                    format: uuid
+                description:
+                    type: string
+                RAM:
+                    type: object
+                    properties:
+                        type:
+                            type: string
+                            enum: [DDR4, DDR3]
+                        size:
+                            type: integer
+                        speed:
+                            type: integer
+                        serialNumber:
+                            type: string
+                storage:
+                    type: array
+                    items:
+                        type: object
+                        properties:
+                            type:
+                                type: string
+                                enum: [HDD, SSD]
+                            size:
+                                type: integer
+                            speed:
+                                type: integer
+                            serialNumber:
+                                type: string
+                graphicsCard:
+                    type: array
+                    items:
+                        type: object
+                        properties:
+                            name:
+                                type: string
+                            size:
+                                type: integer
+                            serialNumber:
+                                type: string
+                CPUName:
+                    type: string
+                CPUNumberOfCores:
+                    type: integer
+                CPUSpeed:
+                    type: integer
+                network:
+                    type: array
+                    items:
+                        type: object
+                        properties:
+                            name:
+                                type: string
+                            type:
+                                type: string
+                            MAC:
+                                type: string
+                            DHCPEnable:
+                                type: boolean
+                            DHCPServer:
+                                type: string
+                            IPAddress:
+                                type: string
+                            gateway:
+                                type: string
+                uptime:
+                    type: string
+                    format: datetime
+                OSName:
+                    type: string
+                OSVersion:
+                    type: string
+                systemManufacturer:
+                    type: string
+                systemModel:
+                    type: string
+                BIOSVersion:
+                    type: string
+
+                updatedAt:
+                    type: string
+                    format: datetime
+                createdAt:
+                    type: string
+                    format: datetime

@@ -8,6 +8,7 @@ exports.login = catchAsync(async (req, res, next) => {
             new AppError('firmNr, login and password are required', 400)
         );
     }
+    // TODO: check license and return the result
     // TODO: check password and
     res.json({
         token: 'token',

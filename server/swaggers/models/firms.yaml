@@ -16,9 +16,6 @@ components:
                 nr:
                     type: integer
                     example: 1
-                apiKey:
-                    type: string
-                    format: uuid
                 active:
                     type: boolean
                     default: true

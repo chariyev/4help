@@ -33,6 +33,7 @@
     "swagger-jsdoc": "^6.2.8",
     "swagger-ui-express": "^4.6.2",
     "ua-parser-js": "^1.0.34",
+    "uuid": "^9.0.0",
     "xss-clean": "^0.1.1"
   },
   "devDependencies": {

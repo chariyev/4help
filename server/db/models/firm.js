@@ -21,22 +21,22 @@ module.exports = (sequelize, DataTypes) => {
                 required: true,
             },
             name: {
-                type: Sequelize.STRING,
+                type: DataTypes.STRING,
                 required: true,
             },
             nr: {
-                type: Sequelize.INTEGER,
+                type: DataTypes.INTEGER,
                 unique: true,
                 required: true,
             },
-            api_key: {
+            apiKey: {
                 type: DataTypes.UUID,
                 defaultValue: DataTypes.UUIDV4,
                 unique: true,
                 required: true,
             },
             active: {
-                type: Sequelize.BOOLEAN,
+                type: DataTypes.BOOLEAN,
                 defaultValue: true,
             },
         },
